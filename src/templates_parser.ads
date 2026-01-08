@@ -672,7 +672,8 @@ private
    overriding procedure Adjust     (Set : in out Translate_Set);
 
    Null_Set : constant Translate_Set :=
-                (Ada.Finalization.Controlled with null, null);
+                (Ada.Finalization.Controlled
+                 with new Integer'(1), new Association_Map.Map);
 
    ------------------
    -- User filters --
